@@ -23,16 +23,12 @@ var store = {
     ]
   };
 
-  // precioMaquina(componentes)
-
-  
+  // 1. precioMaquina(componentes)
   const machinePrice = components =>  {
-
     let totalPrice = 0
-    
-       components.forEach(c => {
-         let prices = store.prices
-         prices.forEach(e =>{
+        components.forEach(c => {
+        let prices = store.prices
+        prices.forEach(e =>{
              if (c === e.component) {totalPrice += e.price}
       })
       })
@@ -41,4 +37,63 @@ var store = {
 
 console.log (machinePrice(["RAM Quinston Fury", "Motherboard ASUS 1500"]))
 
-// cantidadVentasComponente(componente)
+// 2. cantidadVentasComponente(componente)
+
+const componentsSaleQuantity = component =>  {
+  let sales= store.sales
+  let totalQuantity = 0
+      sales.forEach(c => { 
+        c.components.forEach(e =>{
+        if (component=== e) {totalQuantity ++}
+      })
+    })
+        return totalQuantity;
+       }
+          
+console.log(componentsSaleQuantity("Monitor GPRS 3000"))
+
+// 3. vendedoraDelMes(mes, anio)
+const saleswomanOfTheMonth = (month, year) =>  {
+  let totalMonth= 0
+  let saleDate=store.sales.saleDate
+  saleDate.forEach(c => {
+    agentName=store.sales.agentName
+    agentName.forEach(e =>{
+      if (c === e.agentName) {totalMonth += price.components}
+})
+})
+return totalMonth;
+}
+console.log(saleswomanOfTheMonth(1, 2019) )
+
+/*
+// 5.ventasVendedora(nombre)
+
+const agentSales = name => {
+
+  let agentSales = 0
+
+  let sales = store.sales
+  sales.forEach(n => {
+    if (name === n.agentName) {agentSales += machinePrice(n.components)}
+  })
+
+  return agentSales;
+}
+ 
+console.log (agentSales("Ada"))
+
+// 6. componenteMasVendido()
+
+/*const bestSeller = () => {
+  let prices = store.prices
+  let bestNumber = prices.map(e =>
+    componentSaleQuantity(e.component)).reduce((a, b) => a > b ? a : b)
+    prices.forEach(e =>{
+      if (bestNumber === componentSaleQuantity(e.component)) {e.component}
+})
+  
+}
+
+console.log(bestSeller() )
+*/
