@@ -35,7 +35,7 @@ var store = {
     return totalPrice;
     }
 
-console.log (machinePrice(["RAM Quinston Fury", "Motherboard ASUS 1500"]))
+//console.log (machinePrice(["RAM Quinston Fury", "Motherboard ASUS 1500"]))
 
 // 2. cantidadVentasComponente(componente)
 
@@ -50,50 +50,43 @@ const componentsSaleQuantity = component =>  {
         return totalQuantity;
        }
           
-console.log(componentsSaleQuantity("Monitor GPRS 3000"))
+//console.log(componentsSaleQuantity("Monitor GPRS 3000"))
 
+/*
 // 3. vendedoraDelMes(mes, anio)
 const saleswomanOfTheMonth = (month, year) =>  {
   let totalMonth= 0
-  let saleDate=store.sales.saleDate
-  saleDate.forEach(c => {
-    agentName=store.sales.agentName
-    agentName.forEach(e =>{
-      if (c === e.agentName) {totalMonth += price.components}
-})
-})
-return totalMonth;
-}
-console.log(saleswomanOfTheMonth(1, 2019) )
-
-/*
-// 5.ventasVendedora(nombre)
-
-const agentSales = name => {
-
-  let agentSales = 0
-
-  let sales = store.sales
-  sales.forEach(n => {
-    if (name === n.agentName) {agentSales += machinePrice(n.components)}
-  })
-
-  return agentSales;
-}
- 
-console.log (agentSales("Ada"))
-
-// 6. componenteMasVendido()
-
-/*const bestSeller = () => {
-  let prices = store.prices
-  let bestNumber = prices.map(e =>
-    componentSaleQuantity(e.component)).reduce((a, b) => a > b ? a : b)
-    prices.forEach(e =>{
-      if (bestNumber === componentSaleQuantity(e.component)) {e.component}
-})
-  
-}
-
-console.log(bestSeller() )
+  let sales=store.sales
+  sales.forEach(c => {
+    let prices=store.prices
+    let yearSale=c.saleDate.getFullYear()
+    let monthSale=c.saleDate.getMonth() + 1
+      if (year === yearSale && month===monthSale) {
+        //totalMonth += c.sales
+        console.log(machinePrice(c.components));
+        let totalComponents=machinePrice(c.components)
+        let result = totalComponents.reduce(fmachinePrice(c.components))
+      }
+    })
+    //return totalMonth;
+  }
+  console.log(saleswomanOfTheMonth(1, 2019))
 */
+
+
+//4. ventasMes (mes, anio)
+const totalMonthSales = (month, year) =>  {
+  let totalMonth= 0
+  let sales=store.sales
+  sales.forEach(c => {
+    let prices=store.prices
+    let yearSale=c.saleDate.getFullYear()
+    let monthSale=c.saleDate.getMonth() + 1
+      if (year === yearSale && month===monthSale) {
+        //totalMonth += c.sales
+        console.log(machinePrice(c.components));
+      }
+    })
+    return monthSales;
+
+    console.log(totalMonthSales(1, 2019) )
