@@ -1,42 +1,52 @@
 body {
-  background-color: #F8F4F6;
-  font-family: "Roboto Slab", serif;
+  background-color: #FCFAFB;
+  font-family: "Ubuntu", sans-serif;
 }
-
-h3 {
-  text-align: center;
-  margin: 50px 50px;
-  color: #B59169;
+body header img {
+  position: relative;
+}
+body header h3 {
+  color: #3D4D33;
   font-weight: bold;
-  display: block;
-  padding-top: 5px;
-  padding-bottom: 30px;
-  border-top: none;
-  font-size: 50px;
+  font-size: 25px;
   text-transform: uppercase;
+  margin-bottom: 30px;
+  position: absolute;
+  top: 240px;
+  left: 150px;
 }
-
-a {
-  color: #B59169;
-  text-decoration: none;
+body header .plusBtn {
+  position: absolute;
+  border: none;
+  top: 250px;
+  right: 210px;
+  background-color: #F2CF73;
+  float: right;
+  color: #3D4D33;
 }
-
-a:hover {
-  color: #947757;
-  text-decoration: none;
-}
-
-header {
-  height: 400px;
-  width: 100%;
-  background: #EDDECE;
-}
-
-img {
+body header img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding-top: 20px;
+}
+body table {
+  padding-top: 30px;
+  border-top: 1px solid #3D4D33;
+}
+body table tr {
+  background-color: #3D4D33;
+  width: 100%;
+  color: #F9C1AA;
+  margin-top: 50px;
+  height: 40px;
+}
+body .report p {
+  color: #3D4D33;
+  margin-top: 55px;
+}
+body .reportText {
+  background-color: #f7f0e8;
 }
 
 /*# sourceMappingURL=styles.css.map */
