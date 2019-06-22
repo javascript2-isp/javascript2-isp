@@ -3,10 +3,15 @@
 body {
   background-color:		#FCFAFB;
   font-family: 'Ubuntu', sans-serif;
+  margin:0;
 
 header {
   img{
     position: relative;
+    padding: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   h3 {
@@ -16,8 +21,8 @@ header {
     text-transform: uppercase;
     margin-bottom:30px;
     position:absolute;
-    top: 240px;
-    left:150px;
+    top: 220px;
+    left:140px;
     }
 
   .plusBtn {
@@ -29,18 +34,11 @@ header {
     float: right;
     color: #3D4D33;
     }
-
-  img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
-    }
 }
 
 table{
   padding-top: 30px;
-  border-top: 1px solid #3D4D33;
+  
   tr{
     background-color:		#3D4D33;
     width:100%;

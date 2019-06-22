@@ -1,9 +1,14 @@
 body {
   background-color: #FCFAFB;
   font-family: "Ubuntu", sans-serif;
+  margin: 0;
 }
 body header img {
   position: relative;
+  padding: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 body header h3 {
   color: #3D4D33;
@@ -12,8 +17,8 @@ body header h3 {
   text-transform: uppercase;
   margin-bottom: 30px;
   position: absolute;
-  top: 240px;
-  left: 150px;
+  top: 220px;
+  left: 140px;
 }
 body header .plusBtn {
   position: absolute;
@@ -24,15 +29,8 @@ body header .plusBtn {
   float: right;
   color: #3D4D33;
 }
-body header img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 20px;
-}
 body table {
   padding-top: 30px;
-  border-top: 1px solid #3D4D33;
 }
 body table tr {
   background-color: #3D4D33;
