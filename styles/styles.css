@@ -1,50 +1,79 @@
 body {
-  background-color: #FCFAFB;
-  font-family: "Ubuntu", sans-serif;
+  background-color: #F8EFEA;
+  font-family: "Noto Sans KR", sans-serif;
   margin: 0;
 }
 body header img {
   position: relative;
-  padding: 0;
+  padding: 0 0 20px 0;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border-bottom: solid 1px #B2976C;
 }
 body header h3 {
-  color: #3D4D33;
+  color: #B2976C;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 40px;
   text-transform: uppercase;
   margin-bottom: 30px;
   position: absolute;
-  top: 220px;
-  left: 140px;
+  top: 280px;
+  left: 538px;
+  text-align: center;
 }
 body header .plusBtn {
   position: absolute;
   border: none;
-  top: 250px;
+  top: 330px;
   right: 210px;
-  background-color: #F2CF73;
+  background-color: #F8EFEA;
   float: right;
-  color: #3D4D33;
+  color: #B2976C;
 }
 body table {
-  padding-top: 30px;
+  padding-top: 150px;
+  width: 80%;
 }
-body table tr {
-  background-color: #3D4D33;
-  width: 100%;
-  color: #F9C1AA;
-  margin-top: 50px;
+body table td {
+  border-right: 1px solid #B2976C;
+  color: #B2976C;
+  margin-top: 70px;
   height: 40px;
 }
+body table th {
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid #B2976C;
+  color: #B2976C;
+}
+body table tr {
+  border-top: 1px solid #B2976C;
+  color: #B2976C;
+}
+body .flower {
+  position: relative;
+  padding: 0 0 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 body .report p {
-  color: #3D4D33;
-  margin-top: 55px;
+  color: #B2976C;
+  margin-top: 50px;
+  text-align: center;
 }
 body .reportText {
-  background-color: #f7f0e8;
+  background-color: #B2976C;
+}
+
+.footer {
+  position: relative;
+  padding: 0 0 90px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #3B3736;
 }
 
 /*# sourceMappingURL=styles.css.map */
