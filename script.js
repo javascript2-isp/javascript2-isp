@@ -146,3 +146,13 @@ const salesPositive = (month, year) =>  {
 {return true} else {return false}
 }
 console.log(salesPositive(1,2019))
+
+var deleteItem = function (btn) {
+  taskInput.splice(btn.id, 1)
+  printTaskList()
+}
+
+var toggleItem = function (btn) {
+  taskInput[btn.id].isPending = !taskInput[btn.id].isPending
+  printTaskList()
+}

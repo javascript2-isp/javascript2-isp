@@ -1,17 +1,20 @@
 body {
   background-color: #F8EFEA;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Merriweather", serif;
   margin: 0;
 }
-body header img {
-  position: relative;
-  padding: 0 0 20px 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+header {
   border-bottom: solid 1px #B2976C;
 }
-body header h3 {
+header img {
+  position: relative;
+  padding: 0 0 20px 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+header h3 {
   color: #B2976C;
   font-weight: bold;
   font-size: 40px;
@@ -19,61 +22,99 @@ body header h3 {
   margin-bottom: 30px;
   position: absolute;
   top: 280px;
-  left: 538px;
-  text-align: center;
+  left: 525px;
 }
-body header .plusBtn {
+header .plusBtn {
   position: absolute;
-  border: none;
   top: 330px;
   right: 210px;
-  background-color: #F8EFEA;
+  border: none;
+  background-color: #f0e7e2;
   float: right;
   color: #B2976C;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  background-size: 18px 18px;
+  background-image: url("../images/vector.svg");
 }
-body table {
+
+table {
   padding-top: 150px;
-  width: 80%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
-body table td {
-  border-right: 1px solid #B2976C;
+table td {
+  background-color: #f0e7e2;
+  border: 1px solid #B2976C;
   color: #B2976C;
   margin-top: 70px;
   height: 40px;
 }
-body table th {
+table th {
   padding: 8px;
   text-align: center;
-  border-right: 1px solid #B2976C;
+  background-color: #f0e7e2;
+  border: 1px solid #B2976C;
   color: #B2976C;
 }
-body table tr {
-  border-top: 1px solid #B2976C;
-  color: #B2976C;
-}
-body .flower {
-  position: relative;
-  padding: 0 0 20px 0;
-  display: block;
+
+.flower {
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+  display: block;
 }
-body .report p {
+
+.report p {
   color: #B2976C;
-  margin-top: 50px;
+  margin-top: 40px;
   text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
 }
-body .reportText {
-  background-color: #B2976C;
+.report .reportText {
+  background-color: #f0e7e2;
+  width: 90%;
+  height: 200px;
+  margin: auto;
+  margin-bottom: 40px;
 }
 
 .footer {
+  border-top: solid 1px #B2976C;
+  background-color: #C8DFE5;
+  height: 135px;
+  margin: auto;
+}
+.footer .footerImage {
   position: relative;
-  padding: 0 0 90px 0;
-  display: block;
+  padding: 0;
   margin-left: auto;
   margin-right: auto;
-  background-color: #3B3736;
+  display: block;
+}
+
+@media screen and (max-width: 420px) {
+  header {
+    border-bottom: none;
+  }
+  header img {
+    border-bottom: solid 1px #B2976C;
+  }
+  header h3 {
+    position: relative;
+    top: 20px;
+    left: auto;
+  }
+  header .plusBtn {
+    top: 345px;
+    right: 70px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

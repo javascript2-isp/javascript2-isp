@@ -1,98 +1,106 @@
 @import "mixins.scss";
+@import "variables.scss";
 
 body {
-  background-color:		#F8EFEA;
-  font-family: 'Noto Sans KR', sans-serif;
+  background-color:	$primary-color;
+  font-family: 'Merriweather', serif;
   margin:0;
-
-header {
-  img{
-    position: relative;
-    padding: 0 0 20px 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom: solid 1px	#B2976C;
-  }
-
-  h3 {
-    color: 	#B2976C;
-    font-weight: bold;
-    font-size: 40px;
-    text-transform: uppercase;
-    margin-bottom:30px;
-    position:absolute;
-    top: 280px;
-    left:538px;
-    text-align: center;
-    }
-
-  .plusBtn {
-    position: absolute;
-    border: none;
-    top: 330px;
-    right: 210px;
-    background-color: 	#F8EFEA;
-    float: right;
-    color: #B2976C;
-    }
 }
 
+header {
+  border-bottom: $borderBottom;
+    img{
+      position: relative;
+      padding: 0 0 20px 0;
+      @include centerBlock;
+    }
+    h3 {
+      color: 	$secondary-color;
+      font-weight: bold;
+      font-size: 40px;
+      text-transform: uppercase;
+      margin-bottom:30px;
+      position:absolute;
+      top: 280px;
+      left:525px;
+    }
+    .plusBtn {
+      position: absolute;
+      top: 330px;
+      right: 210px;
+      @include button(40px, $height);
+    }
+}
 
 table{
   padding-top: 150px;
-  width: 80%;
-  td{
-    
-   
-  
-  border-right: 1px solid #B2976C;
-    color:	#B2976C;
-    margin-top:70px;
-    height: 40px;
-  }
-
-  th{
-    padding: 8px;
-    text-align: center;
-    
-    border-right: 1px solid #B2976C;
-      color:	#B2976C;
-  }
-
-  tr{
-    
-    border-top: 1px solid #B2976C;
-      color:	#B2976C;
-  }
+  width: 90%;
+  @include center;
+    td{
+      background-color: $third-color;
+      border: $border;
+      color:	$secondary-color;
+      margin-top:70px;
+      height: $height;
+    }
+    th{
+      padding: 8px;
+      text-align: center;
+      background-color: $third-color;
+      border: $border;
+      color:	$secondary-color;
+    }
 }
 
 .flower{
-  position: relative;
-  padding: 0 0 20px 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top:30px;
+  @include centerBlock;
 }
 
 .report{
-  p{
-    color:	#B2976C;
-    margin-top: 50px;
-    text-align: center;
-  }
-}
-
-.reportText{
-  background-color: #B2976C;
-}
+    p{
+      color:	$secondary-color;
+      margin-top: 40px;
+      text-align: center;
+      font-weight:bold;
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+    .reportText{
+      background-color: $third-color;
+      width: 90%;
+      height: 200px;
+      margin: auto;
+      margin-bottom: 40px;
+    }
 }
 
 .footer{
-  position: relative;
-  padding: 0 0 90px 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  background-color:	#3B3736;
+  border-top: $borderTop;
+  background-color: $forth-color;
+  height: 135px;
+  margin: auto;
+    .footerImage{
+      position: relative;
+      padding: 0;
+      @include centerBlock;
+    }
+}
+
+@media screen and (max-width: 420px) {
+  header {
+    border-bottom: none;
+      img{
+        border-bottom: $borderBottom;
+      }
+      h3{
+        position: relative;
+        top:20px;
+        left:auto;
+      }
+      .plusBtn{
+        top: 345px;
+        right: 70px;
+      }
+  }
 }
