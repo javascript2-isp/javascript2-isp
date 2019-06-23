@@ -26,9 +26,12 @@ header {
     }
     .plusBtn {
       position: absolute;
-      top: 330px;
+      top: 326px;
       right: 210px;
       @include button(40px, $height);
+        &:hover{
+         background-color:$forth-color;
+        }
     }
 }
 

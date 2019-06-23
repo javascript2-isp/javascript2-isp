@@ -26,7 +26,7 @@ header h3 {
 }
 header .plusBtn {
   position: absolute;
-  top: 330px;
+  top: 326px;
   right: 210px;
   border: none;
   background-color: #f0e7e2;
@@ -39,6 +39,9 @@ header .plusBtn {
   border-radius: 50%;
   background-size: 18px 18px;
   background-image: url("../images/vector.svg");
+}
+header .plusBtn:hover {
+  background-color: #C8DFE5;
 }
 
 table {
