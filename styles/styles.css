@@ -20,6 +20,10 @@ header .headerImage {
   display: block;
 }
 
+.sales {
+  position: relative;
+}
+
 h3 {
   color: #B2976C;
   font-weight: bold;
@@ -110,21 +114,33 @@ table th {
   display: block;
 }
 
-@media screen and (max-width: 420px) {
-  header {
-    border-bottom: none;
+@media (max-width: 800px) {
+  h3 {
+    left: 288px;
+    top: 190px;
   }
-  header img {
-    border-bottom: solid 1px #B2976C;
+
+  .plusBtn {
+    top: 237px;
+    right: 104px;
   }
-  header h3 {
-    position: relative;
-    top: 20px;
-    left: auto;
+
+  table {
+    padding-top: 345px;
   }
-  header .plusBtn {
-    top: 345px;
-    right: 70px;
+}
+@media (max-width: 550px) {
+  h3 {
+    left: 172px;
+    top: 126px;
+  }
+
+  .plusBtn {
+    top: 171px;
+  }
+
+  table {
+    padding-top: 254px;
   }
 }
 

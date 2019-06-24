@@ -20,6 +20,10 @@ header {
       @include centerBlock;
     }
 }
+
+.sales{
+  position:relative;
+}
     h3 {
       color: 	$secondary-color;
       font-weight: bold;
@@ -97,20 +101,33 @@ table{
     }
 }
 
-@media screen and (max-width: 420px) {
-  header {
-    border-bottom: none;
-      img{
-        border-bottom: $borderBottom;
-      }
-      h3{
-        position: relative;
-        top:20px;
-        left:auto;
-      }
-      .plusBtn{
-        top: 345px;
-        right: 70px;
-      }
+@media (max-width: 800px){
+  h3{
+    left:288px;
+    top:190px;
   }
+  .plusBtn{
+    top:237px;
+    right:104px;
+  }
+  table{
+    padding-top:345px;
+  }
+}
+
+@media (max-width: 550px){
+  h3{
+    left:172px;
+    top:126px;
+  }
+  .plusBtn{
+    top:171px;
+  }
+  table{
+    padding-top:254px;
+  }
+}
+
+@media (max-width: 420px) {
+
 }

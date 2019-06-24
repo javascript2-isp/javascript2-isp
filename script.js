@@ -147,6 +147,24 @@ const salesPositive = (month, year) =>  {
 }
 console.log(salesPositive(1,2019))
 
+
+
+// 11. sucursalDelMes(mes, anio)
+const SucursalOfTheMonth =(m, y)=>{
+  let list = store.sucursals.map(
+    a => {
+      let x = {
+        name:a,
+        total: monthSales(m, y, store.sales.filter( s => s.sucursal === a)) }
+        return x
+    }).reduce((a,b) => a.total > b.total ? a : b)
+    return list.name
+}
+console.log(SucursalOfTheMonth(1,2019))
+
+
+
+//Button
 var deleteItem = function (btn) {
   taskInput.splice(btn.id, 1)
   printTaskList()
