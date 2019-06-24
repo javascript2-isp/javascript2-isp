@@ -156,3 +156,12 @@ var toggleItem = function (btn) {
   taskInput[btn.id].isPending = !taskInput[btn.id].isPending
   printTaskList()
 }
+
+
+
+
+//Fixed header
+window.onscroll = function() {myFunction()};
+
+
+

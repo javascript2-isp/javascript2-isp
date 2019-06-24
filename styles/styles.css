@@ -6,28 +6,35 @@ body {
 
 header {
   border-bottom: solid 1px #B2976C;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: #F8EFEA;
 }
-header img {
+header .headerImage {
   position: relative;
-  padding: 0 0 20px 0;
+  padding: 0;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
-header h3 {
+
+h3 {
   color: #B2976C;
   font-weight: bold;
   font-size: 40px;
   text-transform: uppercase;
   margin-bottom: 30px;
   position: absolute;
-  top: 280px;
+  top: 270px;
   left: 525px;
 }
-header .plusBtn {
+
+.plusBtn {
   position: absolute;
-  top: 326px;
-  right: 210px;
+  top: 317px;
+  right: 320px;
   border: none;
   background-color: #f0e7e2;
   float: right;
@@ -40,12 +47,12 @@ header .plusBtn {
   background-size: 18px 18px;
   background-image: url("../images/vector.svg");
 }
-header .plusBtn:hover {
+.plusBtn:hover {
   background-color: #C8DFE5;
 }
 
 table {
-  padding-top: 150px;
+  padding-top: 420px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -72,7 +79,7 @@ table th {
   display: block;
 }
 
-.report p {
+.report .reportTitle {
   color: #B2976C;
   margin-top: 40px;
   text-align: center;
@@ -86,6 +93,7 @@ table th {
   height: 200px;
   margin: auto;
   margin-bottom: 40px;
+  border: 1px solid #B2976C;
 }
 
 .footer {

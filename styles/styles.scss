@@ -9,11 +9,17 @@ body {
 
 header {
   border-bottom: $borderBottom;
-    img{
+  position: fixed;
+  width:100%;
+  z-index: 1;
+  background-color: $primary-color;
+    .headerImage{
       position: relative;
-      padding: 0 0 20px 0;
+      padding: 0;
+      width:70%;
       @include centerBlock;
     }
+}
     h3 {
       color: 	$secondary-color;
       font-weight: bold;
@@ -21,22 +27,22 @@ header {
       text-transform: uppercase;
       margin-bottom:30px;
       position:absolute;
-      top: 280px;
+      top: 270px;
       left:525px;
+     
     }
     .plusBtn {
       position: absolute;
-      top: 326px;
-      right: 210px;
+      top: 317px;
+      right: 320px;
       @include button(40px, $height);
         &:hover{
-         background-color:$forth-color;
+          background-color:$fourth-color;
         }
     }
-}
 
 table{
-  padding-top: 150px;
+  padding-top: 420px;
   width: 90%;
   @include center;
     td{
@@ -57,11 +63,11 @@ table{
 
 .flower{
   margin-top:30px;
-  @include centerBlock;
+  @include centerBlock;    
 }
 
 .report{
-    p{
+    .reportTitle{
       color:	$secondary-color;
       margin-top: 40px;
       text-align: center;
@@ -75,12 +81,13 @@ table{
       height: 200px;
       margin: auto;
       margin-bottom: 40px;
+      border: 1px solid $secondary-color;
     }
 }
 
 .footer{
   border-top: $borderTop;
-  background-color: $forth-color;
+  background-color: $fourth-color;
   height: 135px;
   margin: auto;
     .footerImage{
