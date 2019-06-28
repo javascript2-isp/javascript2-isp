@@ -114,7 +114,28 @@ const bestSeller = () => {
    })
    return componentName[0].component;
 };
-console.log(bestSeller());
+// renderPorSucursal()
+const sucursalRender = () => {
+   let sucursalSales = store.sucursals.map(a => {
+      let x = {
+         sucursal: a,
+         total: filteredSales(a)
+      }
+      return x
+   })
+   return sucursalSales
+}
+// renderPorMes()
+let data = store.sales
+let list = []
+data.forEach(c => {
+   list.push((c.saleDate.getMonth()))
+})
+const months = list.filter((e, i) => list.indexOf(e) === i)
+console.log(list)
+const monthRender = () => {
+
+}
 //Button
 var deleteItem = function(btn) {
  taskInput.splice(btn.id, 1)
