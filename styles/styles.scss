@@ -1,0 +1,133 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+body {
+  background-color:	$primary-color;
+  font-family: 'Merriweather', serif;
+  margin:0;
+}
+
+header {
+  border-bottom: $borderBottom;
+  position: fixed;
+  width:100%;
+  z-index: 1;
+  background-color: $primary-color;
+    .headerImage{
+      position: relative;
+      padding: 0;
+      width:70%;
+      @include centerBlock;
+    }
+}
+
+.sales{
+  position:relative;
+}
+    h3 {
+      color: 	$secondary-color;
+      font-weight: bold;
+      font-size: 40px;
+      text-transform: uppercase;
+      margin-bottom:30px;
+      position:absolute;
+      top: 270px;
+      left:525px;
+     
+    }
+    .plusBtn {
+      position: absolute;
+      top: 317px;
+      right: 320px;
+      @include button(40px, $height);
+        &:hover{
+          background-color:$fourth-color;
+        }
+    }
+
+table{
+  padding-top: 420px;
+  width: 90%;
+  @include center;
+    td{
+      background-color: $third-color;
+      border: $border;
+      color:	$secondary-color;
+      margin-top:70px;
+      height: $height;
+    }
+    th{
+      padding: 8px;
+      text-align: center;
+      background-color: $third-color;
+      border: $border;
+      color:	$secondary-color;
+    }
+}
+
+.flower{
+  margin-top:30px;
+  @include centerBlock;    
+}
+
+.report{
+    .reportTitle{
+      color:	$secondary-color;
+      margin-top: 40px;
+      text-align: center;
+      font-weight:bold;
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+    .reportText{
+      background-color: $third-color;
+      width: 90%;
+      height: 200px;
+      margin: auto;
+      margin-bottom: 40px;
+      border: 1px solid $secondary-color;
+    }
+}
+
+.footer{
+  border-top: $borderTop;
+  background-color: $fourth-color;
+  height: 135px;
+  margin: auto;
+    .footerImage{
+      position: relative;
+      padding: 0;
+      @include centerBlock;
+    }
+}
+
+@media (max-width: 800px){
+  h3{
+    left:288px;
+    top:190px;
+  }
+  .plusBtn{
+    top:237px;
+    right:104px;
+  }
+  table{
+    padding-top:345px;
+  }
+}
+
+@media (max-width: 550px){
+  h3{
+    left:172px;
+    top:126px;
+  }
+  .plusBtn{
+    top:171px;
+  }
+  table{
+    padding-top:254px;
+  }
+}
+
+@media (max-width: 420px) {
+
+}

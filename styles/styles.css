@@ -1,3 +1,147 @@
+body {
+  background-color: #F8EFEA;
+  font-family: "Merriweather", serif;
+  margin: 0;
+}
 
+header {
+  border-bottom: solid 1px #B2976C;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: #F8EFEA;
+}
+header .headerImage {
+  position: relative;
+  padding: 0;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.sales {
+  position: relative;
+}
+
+h3 {
+  color: #B2976C;
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: absolute;
+  top: 270px;
+  left: 525px;
+}
+
+.plusBtn {
+  position: absolute;
+  top: 317px;
+  right: 320px;
+  border: none;
+  background-color: #f0e7e2;
+  float: right;
+  color: #B2976C;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  background-size: 18px 18px;
+  background-image: url("../images/vector.svg");
+}
+.plusBtn:hover {
+  background-color: #C8DFE5;
+}
+
+table {
+  padding-top: 420px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+table td {
+  background-color: #f0e7e2;
+  border: 1px solid #B2976C;
+  color: #B2976C;
+  margin-top: 70px;
+  height: 40px;
+}
+table th {
+  padding: 8px;
+  text-align: center;
+  background-color: #f0e7e2;
+  border: 1px solid #B2976C;
+  color: #B2976C;
+}
+
+.flower {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.report .reportTitle {
+  color: #B2976C;
+  margin-top: 40px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.report .reportText {
+  background-color: #f0e7e2;
+  width: 90%;
+  height: 200px;
+  margin: auto;
+  margin-bottom: 40px;
+  border: 1px solid #B2976C;
+}
+
+.footer {
+  border-top: solid 1px #B2976C;
+  background-color: #C8DFE5;
+  height: 135px;
+  margin: auto;
+}
+.footer .footerImage {
+  position: relative;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@media (max-width: 800px) {
+  h3 {
+    left: 288px;
+    top: 190px;
+  }
+
+  .plusBtn {
+    top: 237px;
+    right: 104px;
+  }
+
+  table {
+    padding-top: 345px;
+  }
+}
+@media (max-width: 550px) {
+  h3 {
+    left: 172px;
+    top: 126px;
+  }
+
+  .plusBtn {
+    top: 171px;
+  }
+
+  table {
+    padding-top: 254px;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

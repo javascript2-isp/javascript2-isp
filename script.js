@@ -37,7 +37,7 @@ const machinePrice = components => {
  return totalPrice;
 }
 //  cantidadVentasComponente(componente)
-const componentsSaleQuantity = component => {
+const componentSaleQuantity = component => {
  let sales = store.sales
  let totalQuantity = 0
  sales.forEach(c => {
@@ -106,6 +106,15 @@ const SucursalOfTheMonth = (m, y) => {
  }).reduce((a, b) => a.total > b.total ? a : b)
  return list.name
 }
+// ComponenteMasVendido()
+const bestSeller = () => {
+   let bestNumber = store.prices.map(e => componentSaleQuantity(e.component)).reduce((a,b) => a > b ? a : b)
+   let componentName = store.prices.filter(e =>{
+      if (bestNumber === componentSaleQuantity(e.component)) return e
+   })
+   return componentName[0].component;
+};
+console.log(bestSeller());
 //Button
 var deleteItem = function(btn) {
  taskInput.splice(btn.id, 1)
