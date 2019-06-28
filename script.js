@@ -162,10 +162,19 @@ const SucursalOfTheMonth =(m, y)=>{
 }
 console.log(SucursalOfTheMonth(1,2019))
 
+//12 
+const newSale = (saleDate, agentName, components){
+this.saleDate= saleDate
+this.agentName= agentName
+this.components= components
+} 
 
+
+console.log(newSale((2019, 0, 12), "Grace", ["Monitor GPRS 3000", "Motherboard ASUS 1200"]))
+//
 
 //Button
-var deleteItem = function (btn) {
+/*var deleteItem = function (btn) {
   taskInput.splice(btn.id, 1)
   printTaskList()
 }
@@ -174,12 +183,10 @@ var toggleItem = function (btn) {
   taskInput[btn.id].isPending = !taskInput[btn.id].isPending
   printTaskList()
 }
-
-
-
+*/
 
 //Fixed header
-window.onscroll = function() {myFunction()};
+var window.onscroll = function() {myFunction()};
 
 
 
