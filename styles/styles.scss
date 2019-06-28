@@ -9,9 +9,7 @@ body {
 
 header {
   border-bottom: $borderBottom;
-  position: fixed;
   width:100%;
-  z-index: 1;
   background-color: $primary-color;
     .headerImage{
       position: relative;
@@ -22,7 +20,9 @@ header {
 }
 
 .sales{
-  position:relative;
+  display: flex;
+  
+
 }
     h3 {
       color: 	$secondary-color;
@@ -30,15 +30,11 @@ header {
       font-size: 40px;
       text-transform: uppercase;
       margin-bottom:30px;
-      position:absolute;
-      top: 270px;
-      left:525px;
+      
      
     }
     .plusBtn {
-      position: absolute;
-      top: 317px;
-      right: 320px;
+      
       @include button(40px, $height);
         &:hover{
           background-color:$fourth-color;
@@ -46,7 +42,7 @@ header {
     }
 
 table{
-  padding-top: 420px;
+  
   width: 90%;
   @include center;
     td{
