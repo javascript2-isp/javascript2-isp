@@ -136,12 +136,12 @@ console.log(list)
 const monthRender = () => {
 
 }
-//Button
-var deleteItem = function(btn) {
- taskInput.splice(btn.id, 1)
- printTaskList()
-}
-var toggleItem = function(btn) {
- taskInput[btn.id].isPending = !taskInput[btn.id].isPending
- printTaskList()
-}
+
+//let openSelect = () => {
+//  document.getElementById("options").style.display= "block";
+//}
+
+let myFunction = () => {
+   let element = document.getElementById("options");
+   element.classList.toggle("options");
+ }
