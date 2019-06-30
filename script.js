@@ -125,23 +125,32 @@ const sucursalRender = () => {
    })
    return sucursalSales
 }
-// renderPorMes()
-let data = store.sales
-let list = []
-data.forEach(c => {
-   list.push((c.saleDate.getMonth()))
-})
-const months = list.filter((e, i) => list.indexOf(e) === i)
-console.log(list)
-const monthRender = () => {
+console.log(sucursalRender())
+//renderPorMes()
+const monthsRender = () => {
+   let allYears = store.sales.map( e => e.saleDate.getFullYear())
+   let years = allYears.filter((e, i) => allYears.indexOf(e) === i)
+   years.forEach( y => {
+      let allMonths = store.sales.map( e => e.saleDate.getFullYear() === y ? e.saleDate.getMonth() : '')
+      let months = allMonths.filter((e, i) => allMonths.indexOf(e) === i)
+      months.forEach( m => console.log(m+1, monthSales(m+1, y)))
+   })
+}
 
+//render
+const finalRender = () => {
+monthsRender();
+console.log(sucursalRender());
+console.log(`Nuestro producto estrella: ${bestSeller()}`);
 }
-//Button
-var deleteItem = function(btn) {
- taskInput.splice(btn.id, 1)
- printTaskList()
+
+//createLi
+const createLi = (lista) => {
+let sucursalUl = document.getElementById("render")
+lista.forEach (m => 
+   {let li = document.createElement('li')
+   li.innerText = m.sucursal
+   sucursalUl.appendChild(li)
+   })
 }
-var toggleItem = function(btn) {
- taskInput[btn.id].isPending = !taskInput[btn.id].isPending
- printTaskList()
-}
+createLi(sucursalRender())
