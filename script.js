@@ -125,7 +125,6 @@ const sucursalRender = () => {
    })
    return sucursalSales
 }
-console.log(sucursalRender())
 //renderPorMes()
 const monthsRender = () => {
    let allYears = store.sales.map( e => e.saleDate.getFullYear())
@@ -154,3 +153,11 @@ lista.forEach (m =>
    })
 }
 createLi(sucursalRender())
+//let openSelect = () => {
+//  document.getElementById("options").style.display= "block";
+//}
+
+let myFunction = () => {
+   let element = document.getElementById("options");
+   element.classList.toggle("options");
+ }

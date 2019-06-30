@@ -15,8 +15,20 @@
   </header>
   <div class="sales">
   <h3>V e n t a s</h3>
-  <button onclick="sendTask()" class="plusBtn">+</button> 
-</div> 
+  <button onclick="myFunction()" class="plusBtn">+</button> 
+  </div> 
+  <div class="options"> 
+    <select name="vendedora" id="select">
+      <option value="0">Vendedora</option>
+    </select>
+    <select name="componente" id="select">
+      <option value="0">Componente</option>
+    </select>
+    <select name="local" id="select">
+      <option value="0">Local</option>
+    </select>
+    <button class="optionButton" onclick="create()">Enviar</button>
+  </div>
     <table class="dataTable">
   <tr>
     <th>Fecha</th>
