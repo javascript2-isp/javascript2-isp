@@ -143,16 +143,6 @@ console.log(sucursalRender());
 console.log(`Nuestro producto estrella: ${bestSeller()}`);
 }
 
-//createLi
-const createLi = (lista) => {
-let sucursalUl = document.getElementById("render")
-lista.forEach (m => 
-   {let li = document.createElement('li')
-   li.innerText = m.sucursal
-   sucursalUl.appendChild(li)
-   })
-}
-createLi(sucursalRender())
 //let openSelect = () => {
 //  document.getElementById("options").style.display= "block";
 //}
@@ -161,3 +151,27 @@ let myFunction = () => {
    let element = document.getElementById("options");
    element.classList.toggle("options");
  }
+
+ //TODO MAL
+ //createOption
+ const createOption = (list,place) => {
+   let select = document.getElementById(place)
+   list.forEach(e => {
+      let option = document.createElement('option')
+      option.innerText = e;
+      select.appendChild(option)
+      return option
+})
+}
+//createLi
+const createLi = (lista) => {
+   let sucursalUl = document.getElementById("render")
+   lista.forEach (m => 
+      {let li = document.createElement('li')
+      li.innerText = m.sucursal
+      sucursalUl.appendChild(li)
+      })
+   }
+   createLi(sucursalRender())
+
+

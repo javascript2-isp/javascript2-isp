@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     <title>Mothers & Co.</title>
 </head >
-<body>
+<body onload="print()">
   <header class="tableHeader">
     <img class="headerImage" src="images/header.png" alt="">
   </header>
@@ -18,13 +18,13 @@
   <button onclick="myFunction()" class="plusBtn">+</button> 
   </div> 
   <div class="options"> 
-    <select name="vendedora" id="select">
+    <select name="vendedora" id="vendedora">
       <option value="0">Vendedora</option>
     </select>
-    <select name="componente" id="select">
+    <select name="componente" id="componente">
       <option value="0">Componente</option>
     </select>
-    <select name="local" id="select">
+    <select name="local" id="local">
       <option value="0">Local</option>
     </select>
     <button class="optionButton" onclick="create()">Enviar</button>
@@ -38,39 +38,25 @@
     <th>Precio total</th>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td class="date"></td>
+    <td class="agent"></td>
+    <td class="component"></td>
+    <td class="store"></td>
+    <td class="totalPrice"></td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td class="date"></td>
+    <td class="agent"></td>
+    <td class="component"></td>
+    <td class="store"></td>
+    <td class="totalPrice"></td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td class="date"></td>
+    <td class="agent"></td>
+    <td class="component"></td>
+    <td class="store"></td>
+    <td class="totalPrice"></td>
   </tr>
 </table>
 <img class="flower" src="images/mothers8.jpg" alt="">
