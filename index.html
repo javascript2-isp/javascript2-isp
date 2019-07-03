@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     <title>Mothers & Co.</title>
 </head >
-<body>
+<body onload="initialize()">
   <header class="tableHeader">
     <img class="headerImage" src="images/header.png" alt="">
   </header>
@@ -17,15 +17,15 @@
   <h3>V e n t a s</h3>
   <button onclick="myFunction()" class="plusBtn">+</button> 
   </div> 
-  <div class="options togle" id="options"> 
-    <select name="vendedora" id="select">
-      <option value="0">Vendedora</option>
+  <div class="options togle" id="options">
+    <select name="agent" id="agent">
+      <option value="0" disabled selected>Vendedora</option>
     </select>
-    <select name="componente" id="select">
-      <option value="0">Componente</option>
+    <select name="component" id="component">
+      <option value="0" disabled selected>Componente</option>
     </select>
-    <select name="local" id="select">
-      <option value="0">Local</option>
+    <select name="store" id="store">
+      <option value="0" disabled selected>Local</option>
     </select>
     <button class="optionButton" onclick="create()">Enviar</button>
   </div>
@@ -37,47 +37,22 @@
     <th>Local</th> 
     <th>Precio total</th>
   </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
 </table>
 <img class="flower" src="images/mothers8.jpg" alt="">
+<aside class="aboutme-box">
+  <p class="title-p">Empleada del Mes</p>
+  <img class="aboutme-img" src="images/valentina.jpg">
+  <h4 class="name">Ada Gonzalez</h4>
+</aside>
 <div class="report">
     <p class="reportTitle">Reporte</p>
     <div class="reportText">
-    <p></p> 
+    <ul id="sucursalRender">
+    <li>Ventas por sucursal:</li>
+    </ul> 
+    <ul id="monthRender">
+      <li>Ventas por mes:</li>
+      </ul> 
     </div>
 </div> 
 <div class="footer">
