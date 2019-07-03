@@ -1,3 +1,6 @@
+var salesList = [
+
+]
 var store = {
    agents: ["Ada", "Grace", "Hedy", "Sheryl"],
    sucursals: ["Centro","Caballito"],
@@ -24,12 +27,8 @@ var store = {
  };
  
  // arrayComponentes
- let componentArray = []
- const componentA = store.prices.forEach(
-    a => {
-      componentArray.push(a.component)
-    }
- )
+ const componentArray = store.prices.map(({ component }) => component)
+
  //  precioMaquina(componentes)
  const machinePrice = components => {
   let totalPrice = 0
@@ -160,7 +159,17 @@ var store = {
     let element = document.getElementById("options");
     element.classList.toggle("options");
   }
- 
+
+ //createLi
+ const createLi = (lista,id) => {
+   let sucursalUl = document.getElementById(id)
+   lista.forEach (m => 
+      {let li = document.createElement('li')
+      li.innerText = `${m.month}: ${m.total} ventas`
+      sucursalUl.appendChild(li)
+      })
+   }
+
   //createOption
   const createOption = (list,id) => {
     let select = document.getElementById(id)
@@ -171,34 +180,27 @@ var store = {
        return option
  })
  }
- //createLi
- const createLi = (lista,id) => {
-    let sucursalUl = document.getElementById(id)
-    lista.forEach (m => 
-       {let li = document.createElement('li')
-       li.innerText = `${m.month}: ${m.total} ventas`
-       sucursalUl.appendChild(li)
-       })
-    }
-/*  MAL
-//createTr
-const createTr = (lista) => {
-   let table = document.getElementsByClassName("dataTable")
-   lista.forEach (m => 
-      {
-      let tr = document.createElement('tr')
-      table.appendChild(tr)
-      let th = document.createElement("th")
-      th.innerHTML(m.innerText)
-      tr.appendChild(th)
-      })
-   } */
 
+ //obtener info del option
+ const createSale = () => {
+   let sale = { saleDate: new Date(2019, 1, 4), agentName: "", components:[], sucursal: "", totalPrice: "" }
+   let agent = document.getElementById("agent")
+   let component = document.getElementById("component")
+   let store = document.getElementById("store")
+   sale.agentName = agent.value 
+   sale.components.push(component.value)
+   sale.sucursal = store.value
+   sale.totalPrice = machinePrice(sale.components)
+   if (sale.agentName && sale.components && sale.sucursal != "0" && ["0"]) 
+   {salesList.push(sale)} else 
+   {alert("Selecciona tu opcion para continuar")}
+}
+
+ 
  const initialize = () => {
     createLi(sucursalRender(),"sucursalRender")
     createLi(monthsRender(),"monthRender")
     createOption(store.agents,"agent")
     createOption(store.sucursals,"store")
-    createOption(componentArray,"component")
-    createTr(store.sales)
+    createOption(componentArray,"component")  
  }
