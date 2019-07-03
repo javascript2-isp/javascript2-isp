@@ -143,5 +143,5 @@ const monthRender = () => {
 
 let myFunction = () => {
    let element = document.getElementById("options");
-   element.classList.toggle("options");
- }
+   element.classList.toggle("togle");
+}
