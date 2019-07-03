@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     <title>Mothers & Co.</title>
 </head >
-<body onload="print()">
+<body onload="initialize()">
   <header class="tableHeader">
     <img class="headerImage" src="images/header.png" alt="">
   </header>
@@ -18,14 +18,14 @@
   <button onclick="myFunction()" class="plusBtn">+</button> 
   </div> 
   <div class="options"> 
-    <select name="vendedora" id="vendedora">
-      <option value="0">Vendedora</option>
+    <select name="agent" id="agent">
+      <option value="0" disabled selected>Vendedora</option>
     </select>
-    <select name="componente" id="componente">
-      <option value="0">Componente</option>
+    <select name="component" id="component">
+      <option value="0" disabled selected>Componente</option>
     </select>
-    <select name="local" id="local">
-      <option value="0">Local</option>
+    <select name="store" id="store">
+      <option value="0" disabled selected>Local</option>
     </select>
     <button class="optionButton" onclick="create()">Enviar</button>
   </div>
@@ -37,35 +37,17 @@
     <th>Local</th> 
     <th>Precio total</th>
   </tr>
-  <tr>
-    <td class="date"></td>
-    <td class="agent"></td>
-    <td class="component"></td>
-    <td class="store"></td>
-    <td class="totalPrice"></td>
-  </tr>
-  <tr>
-    <td class="date"></td>
-    <td class="agent"></td>
-    <td class="component"></td>
-    <td class="store"></td>
-    <td class="totalPrice"></td>
-  </tr>
-  <tr>
-    <td class="date"></td>
-    <td class="agent"></td>
-    <td class="component"></td>
-    <td class="store"></td>
-    <td class="totalPrice"></td>
-  </tr>
 </table>
 <img class="flower" src="images/mothers8.jpg" alt="">
 <div class="report">
     <p class="reportTitle">Reporte</p>
     <div class="reportText">
-    <ul id="render">
+    <ul id="sucursalRender">
     <li>Ventas por sucursal:</li>
     </ul> 
+    <ul id="monthRender">
+      <li>Ventas por mes:</li>
+      </ul> 
     </div>
 </div> 
 <div class="footer">
