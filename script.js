@@ -77,6 +77,7 @@ var store = {
   }).reduce((a, b) => a.total > b.total ? a : b)
   return list.name
  }
+
  // ventasVendedora(nombre)
  const filteredSales = (type) => {
   let filteredSales = 0
@@ -112,6 +113,11 @@ var store = {
   }).reduce((a, b) => a.total > b.total ? a : b)
   return list.name
  }
+
+ let toggleFunction = () => {
+   let element = document.getElementById("toggle");
+   element.classList.toggle("togle");
+}
  // ComponenteMasVendido()
  const bestSeller = () => {
     let bestNumber = store.prices.map(e => componentSaleQuantity(e.component)).reduce((a,b) => a > b ? a : b)
@@ -151,14 +157,6 @@ var store = {
  })
  return objectSales
 }
- //let openSelect = () => {
- //  document.getElementById("options").style.display= "block";
- //}
- 
- let myFunction = () => {
-    let element = document.getElementById("options");
-    element.classList.toggle("options");
-  }
 
  //createLi
  const createLi = (lista,id) => {
@@ -183,7 +181,7 @@ var store = {
 
  //obtener info del option
  const createSale = () => {
-   let sale = { saleDate: new Date(2019, 1, 4), agentName: "", components:[], sucursal: "", totalPrice: "" }
+   let sale = { saleDate: new Date(), agentName: "", components:[], sucursal: "", totalPrice: "" }
    let agent = document.getElementById("agent")
    let component = document.getElementById("component")
    let store = document.getElementById("store")
@@ -204,3 +202,8 @@ var store = {
     createOption(store.sucursals,"store")
     createOption(componentArray,"component")  
  }
+
+ let myFunction = () => {
+   let element = document.getElementById("options");
+   element.classList.toggle("togle");
+}

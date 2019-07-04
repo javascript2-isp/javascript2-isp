@@ -11,11 +11,11 @@
 </head >
 <body onload="initialize()">
   <header class="tableHeader">
-    <img class="headerImage" src="images/header.png" alt="">
+      <a href="index.html"><img class="headerImage" src="images/header.png" alt=""></a>
   </header>
   <div class="sales">
   <h3>V e n t a s</h3>
-  <button onclick="myFunction()" class="plusBtn">+</button> 
+  <button onclick="myFunction()" class="plusBtn">+</button>
   </div> 
   <div class="options togle" id="options">
     <select name="agent" id="agent">
@@ -42,11 +42,16 @@
 <aside class="aboutme-box">
   <p class="title-p">Mother del Mes</p>
   <img class="aboutme-img" src="images/valentina.jpg">
-  <h4 class="name">Ada Gonzalez</h4>
+  <h4 class="bestAgent">Ada Juarez</h4>
 </aside>
+
+
 <div class="report">
+    <div class="head">
     <p class="reportTitle">Reporte</p>
-    <div class="reportText">
+    <button onclick="toggleFunction()" class="plusBtn">+</button>
+    </div>
+    <div class="reportText togle" id="toggle">
     <ul id="sucursalRender">
     <li>Ventas por sucursal:</li>
     </ul> 
@@ -55,6 +60,9 @@
       </ul> 
     </div>
 </div> 
+
+
+
 <div class="footer">
   <img class="footerImage" src="images/mothers1.jpg" alt="">
 </div>

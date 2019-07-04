@@ -46,6 +46,8 @@ h3 {
 }
 .plusBtn:hover {
   background-color: #C8DFE5;
+  transition: 0.4s;
+  transform: rotate(180deg);
 }
 
 .togle {
@@ -53,9 +55,7 @@ h3 {
 }
 
 #options {
-  margin: auto;
-  justify-content: center;
-  width: 90%;
+  text-align: center;
   padding: 0 0 30px 0;
 }
 
@@ -64,9 +64,9 @@ select {
   background-color: #f0e7e2;
   font-family: "Merriweather", serif;
   color: #B2976C;
-  font-size: 13px;
+  font-size: 15px;
   height: 40px;
-  margin: 0 40px 0 0;
+  margin: 0 35px 0 0;
 }
 
 option {
@@ -89,6 +89,9 @@ option {
 .optionButton:hover {
   background-color: #C8DFE5;
   color: #B2976C;
+  transition: 0.4s;
+  width: 65px;
+  height: 45px;
 }
 
 table {
@@ -138,7 +141,7 @@ table th {
   padding: 8px 0;
   margin: 0 0 10px 0;
 }
-.aboutme-box .name {
+.aboutme-box .bestAgent {
   color: #B2976C;
   text-align: center;
   margin: 15px 0;
@@ -149,10 +152,13 @@ table th {
 .report {
   font-family: "Merriweather", serif;
   color: #B2976C;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .report .reportTitle {
   color: #B2976C;
-  margin-top: 40px;
+  margin: 0 10px 20px 0;
   text-align: center;
   font-weight: bold;
   font-size: 30px;
@@ -160,11 +166,15 @@ table th {
 }
 .report .reportText {
   background-color: #f0e7e2;
-  width: 90%;
-  height: 200px;
+  width: 50%;
   margin: auto;
   margin-bottom: 40px;
   border: 1px solid #B2976C;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
 }
 
 .footer {
