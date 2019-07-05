@@ -1,28 +1,23 @@
-var salesList = [
-
-]
 var store = {
    agents: ["Ada", "Grace", "Hedy", "Sheryl"],
    sucursals: ["Centro","Caballito"],
    sales: [
  
-     { saleDate: new Date(2019, 1, 4), agentName: "Grace", components: ["Monitor GPRS 3000", "Motherboard ASUS 1500"], sucursal: "Centro" },
-     { saleDate: new Date(2019, 0, 1), agentName: "Ada", components: ["Monitor GPRS 3000", "Motherboard ASUS 1500"], sucursal: "Centro" },
-     { saleDate: new Date(2019, 0, 2), agentName: "Grace", components: ["Monitor ASC 543", "Motherboard MZI"], sucursal: "Caballito" },
-     { saleDate: new Date(2019, 0, 10), agentName: "Ada", components: ["Monitor ASC 543", "Motherboard ASUS 1200"], sucursal: "Centro" },
-     { saleDate: new Date(2019, 0, 12), agentName: "Grace", components: ["Monitor GPRS 3000", "Motherboard ASUS 1200"], sucursal: "Caballito" }
+     { saleDate: new Date(2019, 1, 4), agentName: "Grace", components: ["Oleo 12", "Crema facial"], sucursal: "Centro", totalPrice: 320 },
+     { saleDate: new Date(2019, 2, 1), agentName: "Ada", components: ["Oleo 12", "Crema facial"], sucursal: "Centro", totalPrice: 320 },
+     { saleDate: new Date(2019, 0, 2), agentName: "Grace", components: ["Contorno de Ojos", "Mascarilla"], sucursal: "Caballito", totalPrice: 280 } 
    ],
  
    prices: [
-     { component: "Monitor GPRS 3000", price: 200 },
-     { component: "Motherboard ASUS 1500", price: 120 },
-     { component: "Monitor ASC 543", price: 250 },
-     { component: "Motherboard ASUS 1200", price: 100 },
-     { component: "Motherboard MZI", price: 30 },
-     { component: "HDD Toyiva", price: 90 },
-     { component: "HDD Wezter Dishital", price: 75 },
-     { component: "RAM Quinston", price: 110 },
-     { component: "RAM Quinston Fury", price: 230 }
+     { component: "Oleo 12", price: 200 },
+     { component: "Crema Facial", price: 120 },
+     { component: "Contorno de Ojos", price: 250 },
+     { component: "Balsamo Labial", price: 100 },
+     { component: "Mascarilla", price: 30 },
+     { component: "Mascara de Carbon", price: 90 },
+     { component: "Base Liquida", price: 75 },
+     { component: "Sombras naturales", price: 110 },
+     { component: "Hidratante", price: 230 }
    ]
  };
  
@@ -126,6 +121,7 @@ var store = {
     })
     return componentName[0].component;
  };
+
  // renderPorSucursal()
  const sucursalRender = () => {
     let sucursalSales = store.sucursals.map(a => {
@@ -184,15 +180,17 @@ var store = {
    let sale = { saleDate: new Date(), agentName: "", components:[], sucursal: "", totalPrice: "" }
    let agent = document.getElementById("agent")
    let component = document.getElementById("component")
-   let store = document.getElementById("store")
+   let saleStore = document.getElementById("store")
+
    sale.agentName = agent.value 
    sale.components.push(component.value)
-   sale.sucursal = store.value
+   sale.sucursal = saleStore.value
    sale.totalPrice = machinePrice(sale.components)
    if (sale.agentName && sale.components && sale.sucursal != "0" && ["0"]) 
-   {salesList.push(sale)} else 
+   {store.sales.push(sale)} else 
    {alert("Selecciona tu opcion para continuar")}
 }
+
 
  
  const initialize = () => {
@@ -201,9 +199,36 @@ var store = {
     createOption(store.agents,"agent")
     createOption(store.sucursals,"store")
     createOption(componentArray,"component")  
+    createTr(store.sales)
+
  }
 
  let myFunction = () => {
    let element = document.getElementById("options");
    element.classList.toggle("togle");
 }
+
+//fillbestComponent
+ let p = document.getElementsByClassName("bestSeller")
+p.innerText = bestSeller();
+console.log(p)
+
+ //createTrYTd
+ const createTr = (list) => {
+   let container = document.getElementById("container")
+   list.forEach(sale => {
+      let tr = document.createElement('tr')
+      Object.keys(sale).forEach( e=> {
+         let td = document.createElement('td')
+         if (e === 'saleDate'){
+
+         } else {
+            td.innerText =  sale[e]
+         }
+         tr.appendChild(td)
+      })
+      container.appendChild(tr)
+   })
+ }
+
+ 

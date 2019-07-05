@@ -1,3 +1,7 @@
+button:focus {
+  outline: 0;
+}
+
 body {
   background-color: #F8EFEA;
   font-family: "Merriweather", serif;
@@ -17,10 +21,14 @@ header .headerImage {
   display: block;
 }
 
+.carousel, .carousel-inner > .item > img {
+  width: 100%;
+}
+
 .sales {
   display: flex;
   justify-content: center;
-  margin: 5% 0;
+  margin: 5% 0 2% 0;
 }
 
 h3 {
@@ -106,7 +114,7 @@ table td {
   margin-top: 70px;
   height: 40px;
 }
-table th {
+table th, table tr {
   padding: 8px;
   text-align: center;
   background-color: #f0e7e2;
@@ -124,29 +132,42 @@ table th {
 .aboutme-box {
   background-color: #f0e7e2;
   border: 1px solid #B2976C;
-  width: 30%;
-  margin: 30px auto;
+  width: 25%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: -2px 1px 24px 1px #c1dfe6;
 }
-.aboutme-box .aboutme-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  margin: 10px 36%;
+.aboutme-box .bestproduct-img {
+  width: 150px;
+  height: 150px;
+  background-image: url("../images/oilnegro.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 200px;
+}
+.aboutme-box .bestproduct-img:hover {
+  transition: 0.4s;
+  background-image: url("../images/oil.jpg");
+  width: 200px;
+  height: 200px;
+  border-radius: 250px;
 }
 .aboutme-box .title-p {
-  font-size: 17px;
+  font-size: 20px;
   background-color: #C8DFE5;
   color: #B2976C;
+  width: 100%;
   text-align: center;
-  padding: 8px 0;
   margin: 0 0 10px 0;
 }
-.aboutme-box .bestAgent {
+.aboutme-box .bestSeller {
   color: #B2976C;
-  text-align: center;
   margin: 15px 0;
   margin: 10px;
   font-size: 15px;
+  text-align: center;
 }
 
 .report {
@@ -155,13 +176,14 @@ table th {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin: 30px 0;
 }
 .report .reportTitle {
   color: #B2976C;
   margin: 0 10px 20px 0;
   text-align: center;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
   text-transform: uppercase;
 }
 .report .reportText {
