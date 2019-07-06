@@ -1,3 +1,215 @@
+button:focus {
+  outline: 0;
+}
 
+body {
+  background-color: #F8EFEA;
+  font-family: "Merriweather", serif;
+  margin: 0;
+}
+
+header {
+  border-bottom: solid 1px #B2976C;
+  width: 100%;
+  background-color: #F8EFEA;
+}
+header .headerImage {
+  padding: 0;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.carousel, .carousel-inner > .item > img {
+  width: 100%;
+}
+
+.sales {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0 2% 0;
+}
+
+h3 {
+  color: #B2976C;
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+
+.plusBtn {
+  border: none;
+  background-color: #f0e7e2;
+  float: right;
+  color: #B2976C;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  background-size: 18px 18px;
+  background-image: url("../images/vector.svg");
+}
+.plusBtn:hover {
+  background-color: #C8DFE5;
+  transition: 0.4s;
+  transform: rotate(180deg);
+}
+
+.togle {
+  display: none;
+}
+
+#options {
+  text-align: center;
+  padding: 0 0 30px 0;
+}
+
+select {
+  border: 1px solid transparent;
+  background-color: #f0e7e2;
+  font-family: "Merriweather", serif;
+  color: #B2976C;
+  font-size: 15px;
+  height: 40px;
+  margin: 0 35px 0 0;
+}
+
+option {
+  background-color: #f0e7e2;
+  font-family: "Merriweather", serif;
+  color: #B2976C;
+  font-size: 13px;
+}
+
+.optionButton {
+  border: none;
+  background-color: #B2976C;
+  margin-left: 10px;
+  color: #F8EFEA;
+  width: 60px;
+  height: 40px;
+  font-family: "Merriweather", serif;
+  font-size: 13px;
+}
+.optionButton:hover {
+  background-color: #C8DFE5;
+  color: #B2976C;
+  transition: 0.4s;
+  width: 65px;
+  height: 45px;
+}
+
+table {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+table td {
+  background-color: #f0e7e2;
+  border: 1px solid #B2976C;
+  color: #B2976C;
+  margin-top: 70px;
+  height: 40px;
+}
+table th, table tr {
+  padding: 8px;
+  text-align: center;
+  background-color: #f0e7e2;
+  border: 1px solid #B2976C;
+  color: #B2976C;
+}
+
+.flower {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.aboutme-box {
+  background-color: #f0e7e2;
+  border: 1px solid #B2976C;
+  width: 25%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: -2px 1px 24px 1px #c1dfe6;
+}
+.aboutme-box .bestproduct-img {
+  width: 150px;
+  height: 150px;
+  background-image: url("../images/oilnegro.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 200px;
+}
+.aboutme-box .bestproduct-img:hover {
+  transition: 0.4s;
+  background-image: url("../images/oil.jpg");
+  width: 200px;
+  height: 200px;
+  border-radius: 250px;
+}
+.aboutme-box .title-p {
+  font-size: 20px;
+  background-color: #C8DFE5;
+  color: #B2976C;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+.aboutme-box #bestSeller {
+  color: #B2976C;
+  margin: 15px 0;
+  margin: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.report {
+  font-family: "Merriweather", serif;
+  color: #B2976C;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 30px 0;
+}
+.report .reportTitle {
+  color: #B2976C;
+  margin: 0 10px 20px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.report .reportText {
+  background-color: #f0e7e2;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 40px;
+  border: 1px solid #B2976C;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  border-top: solid 1px #B2976C;
+  background-color: #C8DFE5;
+  margin: auto;
+}
+.footer .footerImage {
+  position: relative;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,189 @@
+@import "mixins.scss";
+@import "variables.scss";
+button:focus {outline:0;}
+body {
+  background-color:	$primary-color;
+  font-family: 'Merriweather', serif;
+  margin:0;
+}
+
+header {
+  border-bottom: $borderBottom;
+  width:100%;
+  background-color: $primary-color;
+    .headerImage{
+      padding: 0;
+      width:50%;
+      @include centerBlock;
+    }
+}
+
+.carousel, .carousel-inner > .item > img {
+  width: 100%;
+}
+
+.sales{
+  display: flex;
+  justify-content: center;
+  margin: 5% 0 2% 0;
+}
+    h3 {
+      color: 	$secondary-color;
+      font-weight: bold;
+      font-size: 40px;
+      text-transform: uppercase;
+      margin: 0 10px;
+    }
+    .plusBtn {
+      @include button(40px, $height);
+        &:hover{
+          background-color:$fourth-color;
+          transition: 0.4s;
+          transform: rotate(180deg);
+        
+        }
+    }
+.togle{
+  display:none;
+}
+#options{
+  text-align: center;
+  padding: 0 0 30px 0;
+}
+  
+  select{
+    border: 1px solid transparent;
+    background-color: $third-color;
+    font-family: 'Merriweather', serif;
+    color: $secondary-color;
+    font-size:15px;
+    height:$height;
+    margin: 0 35px 0 0;
+   
+  }
+    option{
+      background-color: $third-color;
+      font-family: 'Merriweather', serif;
+      color: $secondary-color;
+      font-size:13px;
+    }
+    .optionButton{
+      border: none;
+      background-color: 	$secondary-color;
+      margin-left: 10px;
+      color: $primary-color;
+      width:60px;
+      height:$height;
+      font-family: 'Merriweather', serif;
+      font-size:13px;
+        &:hover{
+          background-color:$fourth-color;
+          color: $secondary-color;
+          transition: 0.4s;
+          width: 65px;
+          height: $height+5px;
+    }
+}
+
+table{
+  width: 90%;
+  @include center;
+    td{
+      background-color: $third-color;
+      border: $border;
+      color:	$secondary-color;
+      margin-top:70px;
+      height: $height;
+    }
+    th,tr{
+      padding: 8px;
+      text-align: center;
+      background-color: $third-color;
+      border: $border;
+      color:	$secondary-color;
+    }
+}
+
+.flower{
+  margin-top:30px;
+  @include centerBlock;   
+}
+
+.aboutme-box{
+  background-color: $third-color;
+  border: $border;
+  width: 25%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: -2px 1px 24px 1px rgba(193,223,230,1);
+  .bestproduct-img{
+  width: 150px;
+  height: 150px;
+  background-image: url("../images/oilnegro.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 200px;
+   &:hover{
+     transition: 0.4s;
+    background-image: url("../images/oil.jpg");    
+      width: 200px;
+  height: 200px;
+  border-radius: 250px;
+    }
+  }
+  .title-p{
+    font-size: 20px;
+    background-color: $fourth-color;
+    color: $secondary-color;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 10px 0;
+  }
+  #bestSeller{
+    color: $secondary-color;
+    margin: 15px 0;
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+.report{
+  font-family: 'Merriweather', serif;
+  color:	$secondary-color;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+margin: 30px 0;
+    .reportTitle{
+      color:	$secondary-color;
+      margin: 0 10px 20px 0;
+      text-align: center;
+      font-weight:bold;
+      font-size: 25px;
+      text-transform: uppercase;
+    }
+    .reportText{
+      background-color: $third-color;
+      width: 50%;
+      margin: auto;
+      margin-bottom: 40px;
+      border: 1px solid $secondary-color;
+    }
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+}
+.footer{
+  border-top: $borderTop;
+  background-color: $fourth-color;
+  margin: auto;
+    .footerImage{
+      position: relative;
+      padding: 0;
+      @include centerBlock;
+    }
+}
