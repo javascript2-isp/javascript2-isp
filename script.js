@@ -24,6 +24,24 @@ var store = {
  // arrayComponentes
  const componentArray = store.prices.map(({ component }) => component)
 
+  //obtener info del option
+  const createSale = () => {
+   let sale = { saleDate: new Date(), agentName: "", components:[], sucursal: "", totalPrice: "" }
+   let agent = document.getElementById("agent")
+   let component = document.getElementById("component")
+   let saleStore = document.getElementById("store")
+   sale.agentName = agent.value 
+   agent.value = "0"
+   sale.components.push(component.value)
+   component.value = "0"
+   sale.sucursal = saleStore.value
+   saleStore.value = "0"
+   sale.totalPrice = machinePrice(sale.components)
+   if (sale.agentName && sale.components && sale.sucursal != "0" && ["0"]) 
+   {store.sales.push(sale) && createTr(store.sales)} else 
+   {alert("Selecciona tu opcion para continuar")}
+}
+
  //  precioMaquina(componentes)
  const machinePrice = components => {
   let totalPrice = 0
@@ -175,53 +193,35 @@ var store = {
  })
  }
 
- //obtener info del option
- const createSale = () => {
-   let sale = { saleDate: new Date(), agentName: "", components:[], sucursal: "", totalPrice: "" }
-   let agent = document.getElementById("agent")
-   let component = document.getElementById("component")
-   let saleStore = document.getElementById("store")
-
-   sale.agentName = agent.value 
-   sale.components.push(component.value)
-   sale.sucursal = saleStore.value
-   sale.totalPrice = machinePrice(sale.components)
-   if (sale.agentName && sale.components && sale.sucursal != "0" && ["0"]) 
-   {store.sales.push(sale)} else 
-   {alert("Selecciona tu opcion para continuar")}
-}
-
-
- 
  const initialize = () => {
-    createLi(sucursalRender(),"sucursalRender")
-    createLi(monthsRender(),"monthRender")
-    createOption(store.agents,"agent")
-    createOption(store.sucursals,"store")
-    createOption(componentArray,"component")  
-    createTr(store.sales)
-
+    printInitialData()
  }
+
+ const printInitialData = () => {
+   createLi(sucursalRender(),"sucursalRender")
+   createLi(monthsRender(),"monthRender")
+   createOption(store.agents,"agent")
+   createOption(store.sucursals,"store")
+   createOption(componentArray,"component")  
+   createTr(store.sales)
+   award()
+}
 
  let myFunction = () => {
    let element = document.getElementById("options");
    element.classList.toggle("togle");
 }
 
-//fillbestComponent
- let p = document.getElementsByClassName("bestSeller")
-p.innerText = bestSeller();
-console.log(p)
-
  //createTrYTd
  const createTr = (list) => {
    let container = document.getElementById("container")
+   container.innerHTML = ''
    list.forEach(sale => {
       let tr = document.createElement('tr')
       Object.keys(sale).forEach( e=> {
          let td = document.createElement('td')
          if (e === 'saleDate'){
-
+            td.innerText = `${sale[e].getFullYear()},${sale[e].getMonth()+1},${sale[e].getDate()}`
          } else {
             td.innerText =  sale[e]
          }
@@ -231,4 +231,8 @@ console.log(p)
    })
  }
 
- 
+ //fillbestComponent
+ const award = () => { 
+ let h4 = document.getElementById('bestSeller')
+h4.innerText = bestSeller();
+ }

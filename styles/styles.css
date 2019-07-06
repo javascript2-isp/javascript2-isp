@@ -162,11 +162,11 @@ table th, table tr {
   text-align: center;
   margin: 0 0 10px 0;
 }
-.aboutme-box .bestSeller {
+.aboutme-box #bestSeller {
   color: #B2976C;
   margin: 15px 0;
   margin: 10px;
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
 }
 
