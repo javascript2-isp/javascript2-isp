@@ -72,7 +72,6 @@ header {
       background-color: 	$secondary-color;
       margin-left: 10px;
       color: $primary-color;
-      width:60px;
       height:$height;
       font-family: 'Merriweather', serif;
       font-size:13px;
@@ -80,7 +79,7 @@ header {
           background-color:$fourth-color;
           color: $secondary-color;
           transition: 0.4s;
-          width: 65px;
+        
           height: $height+5px;
     }
 }
@@ -108,12 +107,14 @@ table{
   margin-top:30px;
   @include centerBlock;   
 }
-
+.clientInfo{
+  display: flex;
+  justify-content: center;
 .aboutme-box{
   background-color: $third-color;
   border: $border;
   width: 25%;
-  margin: 20px auto;
+  margin: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -128,9 +129,6 @@ table{
    &:hover{
      transition: 0.4s;
     background-image: url("../images/oil.jpg");    
-      width: 200px;
-  height: 200px;
-  border-radius: 250px;
     }
   }
   .title-p{
@@ -148,6 +146,15 @@ table{
     font-size: 20px;
     text-align: center;
   }
+  .newsTxt{
+    color: $secondary-color;
+    font-size: 18px;
+    margin: 10px;
+  }
+  #email{
+    margin: 2% 0;
+  }
+}
 }
 .report{
   font-family: 'Merriweather', serif;
@@ -172,7 +179,6 @@ margin: 30px 0;
       border: 1px solid $secondary-color;
     }
 }
-
 .head {
   display: flex;
   justify-content: center;

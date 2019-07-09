@@ -89,7 +89,6 @@ option {
   background-color: #B2976C;
   margin-left: 10px;
   color: #F8EFEA;
-  width: 60px;
   height: 40px;
   font-family: "Merriweather", serif;
   font-size: 13px;
@@ -98,7 +97,6 @@ option {
   background-color: #C8DFE5;
   color: #B2976C;
   transition: 0.4s;
-  width: 65px;
   height: 45px;
 }
 
@@ -129,17 +127,21 @@ table th, table tr {
   display: block;
 }
 
-.aboutme-box {
+.clientInfo {
+  display: flex;
+  justify-content: center;
+}
+.clientInfo .aboutme-box {
   background-color: #f0e7e2;
   border: 1px solid #B2976C;
   width: 25%;
-  margin: 20px auto;
+  margin: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
   box-shadow: -2px 1px 24px 1px #c1dfe6;
 }
-.aboutme-box .bestproduct-img {
+.clientInfo .aboutme-box .bestproduct-img {
   width: 150px;
   height: 150px;
   background-image: url("../images/oilnegro.jpg");
@@ -147,14 +149,11 @@ table th, table tr {
   background-position: center;
   border-radius: 200px;
 }
-.aboutme-box .bestproduct-img:hover {
+.clientInfo .aboutme-box .bestproduct-img:hover {
   transition: 0.4s;
   background-image: url("../images/oil.jpg");
-  width: 200px;
-  height: 200px;
-  border-radius: 250px;
 }
-.aboutme-box .title-p {
+.clientInfo .aboutme-box .title-p {
   font-size: 20px;
   background-color: #C8DFE5;
   color: #B2976C;
@@ -162,12 +161,20 @@ table th, table tr {
   text-align: center;
   margin: 0 0 10px 0;
 }
-.aboutme-box #bestSeller {
+.clientInfo .aboutme-box #bestSeller {
   color: #B2976C;
   margin: 15px 0;
   margin: 10px;
   font-size: 20px;
   text-align: center;
+}
+.clientInfo .aboutme-box .newsTxt {
+  color: #B2976C;
+  font-size: 18px;
+  margin: 10px;
+}
+.clientInfo .aboutme-box #email {
+  margin: 2% 0;
 }
 
 .report {

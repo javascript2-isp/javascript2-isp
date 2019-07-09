@@ -1,3 +1,4 @@
+var emailInfo = []
 var store = {
    agents: ["Ada", "Grace", "Hedy", "Sheryl"],
    sucursals: ["Centro","Caballito"],
@@ -20,11 +21,10 @@ var store = {
      { component: "Hidratante", price: 230 }
    ]
  };
- 
- // arrayComponentes
+
  const componentArray = store.prices.map(({ component }) => component)
 
-  //obtener info del option
+
   const createSale = () => {
    let sale = { saleDate: new Date(), agentName: "", components:[], sucursal: "", totalPrice: "" }
    let agent = document.getElementById("agent")
@@ -42,7 +42,7 @@ var store = {
    {alert("Selecciona tu opcion para continuar")}
 }
 
- //  precioMaquina(componentes)
+
  const machinePrice = components => {
   let totalPrice = 0
   components.forEach(c => {
@@ -55,7 +55,7 @@ var store = {
   })
   return totalPrice;
  }
- //  cantidadVentasComponente(componente)
+ 
  const componentSaleQuantity = component => {
   let sales = store.sales
   let totalQuantity = 0
@@ -68,7 +68,7 @@ var store = {
   })
   return totalQuantity;
  }
- // VentasMes
+
  const monthSales = (month, year, data = store.sales) => {
   let list = []
   data.forEach(c => {
@@ -79,7 +79,7 @@ var store = {
   let total = list.length ? list.reduce((a, b) => a + b) : 0
   return total
  }
- // vendedoraDelMes(mes, anio)
+ 
  const agentOfTheMonth = (m, y) => {
   let list = store.agents.map(a => {
      let x = {
@@ -91,7 +91,7 @@ var store = {
   return list.name
  }
 
- // ventasVendedora(nombre)
+
  const filteredSales = (type) => {
   let filteredSales = 0
   let sales = store.sales
@@ -107,7 +107,7 @@ var store = {
   })
   return filteredSales;
  }
- // huboVentas
+
  const salesPositive = (month, year) => {
   if (monthSales(month, year) > 0) {
      return true
@@ -115,7 +115,7 @@ var store = {
      return false
   }
  }
- // sucursalDelMes(mes, anio)
+
  const SucursalOfTheMonth = (m, y) => {
   let list = store.sucursals.map(a => {
      let x = {
@@ -131,7 +131,7 @@ var store = {
    let element = document.getElementById("toggle");
    element.classList.toggle("togle");
 }
- // ComponenteMasVendido()
+
  const bestSeller = () => {
     let bestNumber = store.prices.map(e => componentSaleQuantity(e.component)).reduce((a,b) => a > b ? a : b)
     let componentName = store.prices.filter(e =>{
@@ -140,7 +140,7 @@ var store = {
     return componentName[0].component;
  };
 
- // renderPorSucursal()
+
  const sucursalRender = () => {
     let sucursalSales = store.sucursals.map(a => {
        let x = {
@@ -152,7 +152,6 @@ var store = {
     return sucursalSales
  }
 
- //renderPorMes()
  const monthsRender = () => {
    let objectSales;
     let allYears = store.sales.map( e => e.saleDate.getFullYear())
@@ -172,7 +171,6 @@ var store = {
  return objectSales
 }
 
- //createLi
  const createLi = (lista,id) => {
    let sucursalUl = document.getElementById(id)
    lista.forEach (m => 
@@ -182,7 +180,6 @@ var store = {
       })
    }
 
-  //createOption
   const createOption = (list,id) => {
     let select = document.getElementById(id)
     list.forEach(e => {
@@ -212,7 +209,6 @@ var store = {
    element.classList.toggle("togle");
 }
 
- //createTrYTd
  const createTr = (list) => {
    let container = document.getElementById("container")
    container.innerHTML = ''
@@ -231,8 +227,22 @@ var store = {
    })
  }
 
- //fillbestComponent
  const award = () => { 
  let h4 = document.getElementById('bestSeller')
 h4.innerText = bestSeller();
  }
+
+ function validar_email( email ) 
+ {
+     var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+     return regex.test(email) ? true : false;
+ }
+ 
+
+ const clientEmail = () => {
+    let email = document.getElementById("email")
+    if (validar_email(email.value)) {emailInfo.push(email.value) && alert("¡Gracias por sumarte!")} else {alert("Ingresa un email valido")}
+    email.value = ""
+    var aux = JSON.stringify(emailInfo)
+   window.localStorage.setItem('email', aux)
+   }
