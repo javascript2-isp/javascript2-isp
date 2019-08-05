@@ -24,7 +24,7 @@ var store = {
 
  const componentArray = store.prices.map(({ component }) => component)
 
-
+// guarda con la identación
   const createSale = () => {
    let sale = { saleDate: new Date(), agentName: "", components:[], sucursal: "", totalPrice: "" }
    let agent = document.getElementById("agent")
@@ -46,6 +46,11 @@ var store = {
  const machinePrice = components => {
   let totalPrice = 0
   components.forEach(c => {
+  /*Un find sería más optimo en lugar de un segundo recorrido  
+    components.forEach(c => {
+      totalPrice += store.prices.find( e=> e.component == c).price
+    })
+  */
      let prices = store.prices
      prices.forEach(e => {
         if (c === e.component) {
@@ -60,6 +65,7 @@ var store = {
   let sales = store.sales
   let totalQuantity = 0
   sales.forEach(c => {
+  // mismo comentario que el anterior
      c.components.forEach(e => {
         if (component === e) {
            totalQuantity++
@@ -109,6 +115,8 @@ var store = {
  }
 
  const salesPositive = (month, year) => {
+  // el argumento que pones en el if se ternina resolviendo como un booleano asi que puedes retornarlo directamente y te ahorras el if
+  // return monthSales(month, year) > 0 va a devolver true o false.
   if (monthSales(month, year) > 0) {
      return true
   } else {
@@ -128,6 +136,7 @@ var store = {
  }
 
  let toggleFunction = () => {
+   // por qué está escrito distinto 'toggle'? 
    let element = document.getElementById("toggle");
    element.classList.toggle("togle");
 }
@@ -226,7 +235,7 @@ var store = {
       container.appendChild(tr)
    })
  }
-
+ // indentación please <3 
  const award = () => { 
  let h4 = document.getElementById('bestSeller')
 h4.innerText = bestSeller();
@@ -234,6 +243,7 @@ h4.innerText = bestSeller();
 
  function validar_email( email ) 
  {
+    // wow! <3 
      var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
      return regex.test(email) ? true : false;
  }
